@@ -1,4 +1,7 @@
-# soft404  A work in progress
+# soft404   
+
+A work in progress   
+
 A "soft" 404 page is a page that is served with 200 status, but is really a page that says that content is not available.  
 
 Here we look at urls from commoncrawl and look at predicting which urls are soft 404 types, using 2 different models.  
