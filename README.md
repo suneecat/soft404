@@ -11,10 +11,10 @@ The bert.py and catboost.py code has been derived from code found in repo https:
 This file is from the CC-MAIN-2023-40 crawl.   
 These urls are in file CC-MAIN-20230921073711-20230921103711-00000-warc-wat-http_sites.dat.  
 
-The first 1000 of these urls have been processed with 3 different scripts and the results have been compard.   
-get_response_status.py uses the python requests library to determine the url response status code (200, 404, or other).   
-bert_list_predict.py uses the bert model to predict wheter a url is type 200 or 404.   
-Catboost_predict_psl2.py uses the catboost model to predict whether a url is type 300 or 404.   
+The first 1000 of these urls have been processed with 3 different scripts and the results have been compared.   
+1.) get_response_status.py uses the python requests library to determine the url response status code (200, 404, or other).   
+2.) bert_list_predict.py uses the bert model to predict wheter a url is type 200 or 404.   
+3.) Catboost_predict_psl2.py uses the catboost model to predict whether a url is type 200 or 404.   
 
 Comparison of the results from the 3 different scripts is provided in libreoffice file resp_summary_all.ods.   
 The table from the ods file provided in the image below.
