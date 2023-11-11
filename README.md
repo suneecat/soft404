@@ -15,16 +15,24 @@ This file is from the CC-MAIN-2023-40 crawl.
 These urls are in file CC-MAIN-20230921073711-20230921103711-00000-warc-wat-http_sites.dat.  
 
 The first 1000 of these urls have been processed with 3 different scripts and the results have been compared.   
-1.) get_response_status.py uses the python requests library to determine the url response status code (200, 404, or other).   
+1.) get_nocr_response_status.py uses the python requests library to determine the url response status code (200, 404, or other).   
 2.) bert_list_predict.py uses the bert model to predict wheter a url is type 200 or 404.   
 3.) Catboost_predict_psl2.py uses the catboost model to predict whether a url is type 200 or 404.   
+Any \n characters at the end of a url have been removed, hence the _nocr_ indicator in the name.
 
-Comparison of the results from the 3 different scripts is provided in libreoffice file resp_summary_all.ods.   
+Comparison of the results from the 3 different scripts is provided in libreoffice file resp_summary_all_noCR.ods.   
 The table from the ods file provided in the image below.
-![image](https://github.com/suneecat/soft404/assets/6851656/cea87d76-0edb-4b6d-acff-17e2fda328f3)
-There is very poor correlation between py_response of the python request library and either of the 2 models.
-This is being investigated.
-The fairly high number of 404 responses of py_request are also being investigated.
+![image](https://github.com/suneecat/soft404/assets/6851656/b3a6aa64-1f67-4436-987e-7a2ab796979b)
+
+Of the 878 response types 200 returned by python requests, the BERT model predictor finds 525, or 60%.
+The Catboost model predictor finds 772, or 88%.
+
+Of the 27 response types 404 returned by python requests, the BERT model predictor finds 6, or 22%
+the Catboost model predictor finds 3, or 11%
+
+Neither the BERT nor the Catboost models are suitable for predicting 404 type responses.
+The Catboost model is significantly better than the BERT model in predicting 200 type responses.
+
 
 
 
