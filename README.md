@@ -13,6 +13,7 @@ The bert.py and catboost.py code has been derived from code found in repo https:
 38330 unique urls have been obtained from commoncrawl CC-MAIN-20230921073711-20230921103711-00000.warc.wat file.   
 This file is from the CC-MAIN-2023-40 crawl.   
 These urls are in file CC-MAIN-20230921073711-20230921103711-00000-warc-wat-http_sites.dat.  
+The same urls are in file http_sites.dat.    
 
 The first 1000 of these urls have been processed with 3 different scripts and the results have been compared.   
 1.) get_nocr_response_status.py uses the python requests library to determine the url response status code (200, 404, or other).   
